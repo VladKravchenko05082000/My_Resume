@@ -1,0 +1,25 @@
+body{
+   font-family:'Gilroy-Light';
+   font-weight: $font-weight-light;
+   font-size: 18px;
+   line-height: 22px;
+   overflow-x: hidden;
+   min-width: 320px;
+   height: 100%;
+}
+
+.wrapper{
+   margin: 0px auto;
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   
+}
+
+.main{
+   flex: 1 1 auto;
+}
+
+a{
+   cursor: pointer;
+}

@@ -1,0 +1,658 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px; }
+
+/* Указываем box sizing(указываем размер блока)*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Убираем линии обводки у некоторых браузеров*/
+:focus, active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+/* Делаем основные теги блочными */
+nav, footer, aside, header {
+  display: block; }
+
+/* Уравниваем поведение шрифтов чтобы небыло различие в разных браузерах */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+/*наследование семейство шрифта, стандартного */
+input,
+button,
+textarea {
+  font-family: inherit; }
+
+/*убираем особености дэбильные в разных браузерах */
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #000000; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400; }
+
+body {
+  font-family: 'Gilroy-Light';
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  overflow-x: hidden;
+  min-width: 320px;
+  height: 100%; }
+
+.wrapper {
+  margin: 0px auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.main {
+  flex: 1 1 auto; }
+
+a {
+  cursor: pointer; }
+
+@font-face {
+  font-family: 'Gilroy-ExtraBold';
+  src: url("../../fonts/Gilroy-ExtraBold.eot");
+  src: local("☺"), url("../../fonts/Gilroy-ExtraBold.woff") format("woff"), url("../../fonts/Gilroy-ExtraBold.ttf") format("truetype"), url("../../fonts/Gilroy-ExtraBold.svg") format("svg");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url("../../fonts/Gilroy-Light.eot");
+  src: local("☺"), url("../../fonts/Gilroy-Light.woff") format("woff"), url("../../fonts/Gilroy-Light.ttf") format("truetype"), url("../../fonts/Gilroy-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+.header__container {
+  margin: 0px auto;
+  max-width: 320px;
+  padding: 0px 1.5px 0px 1.5px; }
+  @media (min-width: 480px) {
+    .header__container {
+      max-width: 450px;
+      padding: 0px 15px 0px 15px; } }
+  @media (min-width: 600px) {
+    .header__container {
+      max-width: 550px;
+      padding: 0px 25px 0px 25px; } }
+  @media (min-width: 730px) {
+    .header__container {
+      max-width: 680px;
+      padding: 0px 25px 0px 25px; } }
+  @media (min-width: 900px) {
+    .header__container {
+      max-width: 62%;
+      padding: 0px 0px 0px 0px; } }
+
+.header__menu {
+  font-size: 34px;
+  line-height: 42px;
+  font-family: "Gilroy-ExtraBold";
+  font-weight: 900;
+  position: fixed;
+  top: -200%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  z-index: 2;
+  transition: all 0.8s ease 0s; }
+  @media (min-width: 768px) {
+    .header__menu {
+      position: static;
+      font-size: 18px;
+      line-height: 22px; } }
+  @media (min-width: 1920px) {
+    .header__menu {
+      position: static;
+      font-size: 24px;
+      line-height: 28px; } }
+  @media (min-width: 2200px) {
+    .header__menu {
+      position: static;
+      font-size: 28px;
+      line-height: 32px; } }
+
+.header__menu__list p:hover {
+  color: #090909;
+  transition: all 0.5s ease 0s; }
+
+@media (min-width: 768px) {
+  .header__menu__list {
+    display: flex;
+    justify-content: space-between;
+    position: relative; } }
+
+.header__menu__list a {
+  color: #828282; }
+
+.header__menu__list li {
+  padding: 70px 0px 0px 26px; }
+  @media (min-width: 600px) {
+    .header__menu__list li {
+      padding: 70px 0px 0px 200px; } }
+  @media (min-width: 768px) {
+    .header__menu__list li {
+      padding: 33px 0px 0px 0px; } }
+
+.header__burger {
+  display: block;
+  width: 33px;
+  height: 15px;
+  position: relative;
+  margin: 0px 0px 35px 0px;
+  z-index: 2; }
+  @media (min-width: 768px) {
+    .header__burger {
+      display: none; } }
+
+.header__burger span {
+  position: absolute;
+  background-color: #000000;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  top: 7px;
+  transition: all 0.5s ease 0s; }
+
+.header__burger::before, .header__burger::after {
+  content: '';
+  background-color: #000000;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  right: 0;
+  transition: all 0.5s ease 0s; }
+
+.header__burger::before {
+  top: 0; }
+
+.header__burger::after {
+  bottom: -3px; }
+
+.header__content {
+  position: relative;
+  padding: 65px 0px 0px 0px;
+  color: #090909; }
+  @media (min-width: 768px) {
+    .header__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; } }
+  .header__content__title {
+    font-size: 33px;
+    line-height: 41px;
+    font-family: "Gilroy-ExtraBold";
+    font-weight: 900;
+    display: flex;
+    align-items: center; }
+    @media (min-width: 480px) {
+      .header__content__title {
+        justify-content: space-between; } }
+    @media (min-width: 600px) {
+      .header__content__title {
+        font-size: 38px;
+        line-height: 48px; } }
+    @media (min-width: 768px) {
+      .header__content__title {
+        display: block; } }
+    @media (min-width: 1445px) {
+      .header__content__title {
+        font-size: 47px;
+        line-height: 59px; } }
+    @media (min-width: 1920px) {
+      .header__content__title {
+        font-size: 59px;
+        line-height: 71px; } }
+  .header__content__text {
+    margin: 23px 0px 170px 0px; }
+    @media (min-width: 768px) {
+      .header__content__text {
+        margin: 23px 0px 0px 0px; } }
+    @media (min-width: 1700px) {
+      .header__content__text {
+        font-size: 22px;
+        line-height: 26px; } }
+    @media (min-width: 2200px) {
+      .header__content__text {
+        font-size: 28px;
+        line-height: 32px; } }
+  .header__content__language {
+    transform: rotate(90deg);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -50%;
+    left: -55px; }
+    @media (min-width: 600px) {
+      .header__content__language {
+        bottom: -47%; } }
+    @media (min-width: 768px) {
+      .header__content__language {
+        position: relative;
+        left: 20px; } }
+  .header__content__language a {
+    color: #828282; }
+  .header__content__language__item {
+    font-family: "Gilroy-ExtraBold";
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 42px;
+    text-transform: uppercase; }
+    @media (min-width: 768px) {
+      .header__content__language__item {
+        font-size: 16px;
+        line-height: 20px; } }
+    @media (min-width: 1700px) {
+      .header__content__language__item {
+        font-size: 20px;
+        line-height: 24px; } }
+    @media (min-width: 1920px) {
+      .header__content__language__item {
+        font-size: 22px;
+        line-height: 26px; } }
+    @media (min-width: 2560px) {
+      .header__content__language__item {
+        font-size: 26px;
+        line-height: 30px; } }
+  .header__content__language__line {
+    width: 30px;
+    height: 5px;
+    background-color: #090909;
+    transform: rotate(90deg); }
+    @media (min-width: 768px) {
+      .header__content__language__line {
+        width: 15px;
+        height: 1px; } }
+
+.header__img {
+  background-image: url("../image/header_img/its_me.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 478px; }
+  @media (min-width: 730px) {
+    .header__img {
+      min-height: 700px; } }
+  @media (min-width: 730px) {
+    .header__img {
+      margin: 54px 0px 0px 0px; } }
+  @media (min-width: 768px) {
+    .header__img {
+      background-image: url("../image/header_img/full_its_me.jpg");
+      background-size: contain; } }
+  @media (min-width: 1700px) {
+    .header__img {
+      background-image: url("../image/header_img/full_its_me.jpg");
+      background-size: cover; } }
+  @media (min-width: 1920px) {
+    .header__img {
+      min-height: 900px; } }
+  @media (min-width: 2560px) {
+    .header__img {
+      min-height: 1350px; } }
+
+@media (min-width: 768px) {
+  .header__menu__list::after {
+    content: "";
+    height: 1px;
+    min-width: 100%;
+    position: absolute;
+    top: 100%;
+    background-color: #828282;
+    margin: 28px 0px 0px 0px; } }
+
+p:target {
+  color: #090909; }
+
+.header__menu.active {
+  top: 0; }
+
+.header__burger.active::before {
+  transform: rotate(45deg);
+  top: 6px;
+  left: 0px; }
+
+.header__burger.active::after {
+  transform: rotate(-45deg);
+  bottom: 5px; }
+
+.header__burger.active span {
+  transform: scale(0); }
+
+.header__content__title p {
+  max-width: 250px; }
+
+body.lock {
+  overflow: hidden; }
+
+.About-me {
+  max-width: 100%;
+  background: #F6F6F6;
+  margin: 0px 0px 0px 0px; }
+  @media (min-width: 1680px) {
+    .About-me {
+      margin: 81px 0px 0px 0px; } }
+  .About-me__container {
+    margin: 0px auto;
+    max-width: 320px;
+    padding: 0px 1.5px 0px 1.5px;
+    text-align: center; }
+    @media (min-width: 480px) {
+      .About-me__container {
+        max-width: 450px;
+        padding: 0px 15px 0px 15px; } }
+    @media (min-width: 600px) {
+      .About-me__container {
+        max-width: 550px;
+        padding: 0px 25px 0px 25px; } }
+    @media (min-width: 730px) {
+      .About-me__container {
+        max-width: 680px;
+        padding: 0px 25px 0px 25px; } }
+    @media (min-width: 768px) {
+      .About-me__container {
+        max-width: 485px; } }
+    @media (min-width: 1920px) {
+      .About-me__container {
+        max-width: 700px; } }
+  .About-me__title {
+    padding: 81px 0px 0px 0px;
+    font-size: 34px;
+    line-height: 42px;
+    font-family: "Gilroy-ExtraBold";
+    font-weight: 900; }
+    @media (min-width: 1700px) {
+      .About-me__title {
+        font-size: 56px;
+        line-height: 64px; } }
+  @media (min-width: 1920px) {
+    .About-me__text {
+      font-size: 28px;
+      line-height: 32px; } }
+
+.About-me__text p {
+  padding: 30px 0px 0px 0px; }
+
+.footer__container {
+  margin: 0px auto;
+  max-width: 320px;
+  padding: 82px 1.5px 0px 1.5px;
+  text-align: center; }
+  @media (min-width: 480px) {
+    .footer__container {
+      max-width: 345px; } }
+
+.footer__title {
+  font-size: 34px;
+  line-height: 42px;
+  font-family: "Gilroy-ExtraBold";
+  font-weight: 900;
+  padding: 0px 0px 27px 0px; }
+  @media (min-width: 1700px) {
+    .footer__title {
+      font-size: 46px;
+      line-height: 54px; } }
+  @media (min-width: 1700px) {
+    .footer__title {
+      font-size: 56px;
+      line-height: 64px; } }
+  @media (min-width: 2000px) {
+    .footer__title {
+      font-size: 70px;
+      line-height: 78px; } }
+
+.footer__text {
+  padding: 0px 0px 40px 0px; }
+  @media (min-width: 1920px) {
+    .footer__text {
+      font-size: 28px;
+      line-height: 32px; } }
+
+.footer__send-massage {
+  margin: 0px 0px 48px 0px;
+  width: 316px;
+  height: 42px;
+  background: #000000;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media (min-width: 768px) {
+    .footer__send-massage {
+      max-width: 166px;
+      height: 50px;
+      margin: 0px auto 86px auto; } }
+  @media (min-width: 1920px) {
+    .footer__send-massage {
+      max-width: 316px;
+      height: 60px;
+      margin: 0px auto 86px auto; } }
+
+.footer__refs__items {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 0px 48px 0px; }
+
+.footer__btn {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: "Gilroy-ExtraBold";
+  font-weight: 900; }
+  @media (min-width: 1920px) {
+    .footer__btn {
+      font-size: 24px;
+      line-height: 28px; } }
+  @media (min-width: 2200px) {
+    .footer__btn {
+      font-size: 28px;
+      line-height: 32px; } }
+
+.footer__copyright {
+  padding: 0px 0px 90px 0px; }
+  @media (min-width: 1920px) {
+    .footer__copyright {
+      font-size: 28px;
+      line-height: 32px; } }
+
+.footer__refs__item img {
+  width: 40px;
+  height: 40px; }
+
+.Skills__container {
+  margin: 0px auto;
+  max-width: 320px;
+  padding: 82px 1.5px 0px 1.5px;
+  text-align: center; }
+  @media (min-width: 480px) {
+    .Skills__container {
+      max-width: 345px; } }
+  @media (min-width: 1024px) {
+    .Skills__container {
+      max-width: 940px; } }
+
+.Skills__title {
+  font-size: 34px;
+  line-height: 42px;
+  font-family: "Gilroy-ExtraBold";
+  font-weight: 900;
+  padding: 0px 0px 50px 0px; }
+  @media (min-width: 1700px) {
+    .Skills__title {
+      font-size: 46px;
+      line-height: 54px; } }
+  @media (min-width: 1700px) {
+    .Skills__title {
+      font-size: 56px;
+      line-height: 64px; } }
+  @media (min-width: 2000px) {
+    .Skills__title {
+      font-size: 70px;
+      line-height: 78px; } }
+
+@media (min-width: 1920px) {
+  .Skills__text {
+    font-size: 28px;
+    line-height: 32px; } }
+
+@media (min-width: 1024px) {
+  .Skills__items__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; } }
+
+.Skills__item__rating {
+  display: flex;
+  justify-content: center; }
+  .Skills__item__rating img {
+    margin: 0px 4.5px; }
+
+.Skills__item__title {
+  padding: 0px 0px 41px 0px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;
+  font-family: "Gilroy-ExtraBold";
+  font-weight: 900; }
+  @media (min-width: 1920px) {
+    .Skills__item__title {
+      font-size: 24px;
+      line-height: 27px; } }
+
+.Skills__item__img {
+  padding: 71px 0px 25px 0px; }
+  .Skills__item__img img {
+    width: 90px;
+    height: 90px; }
+
+.Portfolio {
+  background: #F6F6F6;
+  margin: 100px 0px 0px 0px; }
+  .Portfolio__container {
+    margin: 0px auto;
+    max-width: 320px;
+    padding: 82px 1.5px 0px 1.5px;
+    text-align: center; }
+    @media (min-width: 480px) {
+      .Portfolio__container {
+        max-width: 450px;
+        padding: 82px 15px 0px 15px; } }
+    @media (min-width: 600px) {
+      .Portfolio__container {
+        max-width: 550px;
+        padding: 82px 25px 0px 25px; } }
+    @media (min-width: 730px) {
+      .Portfolio__container {
+        max-width: 680px;
+        padding: 82px 25px 0px 25px; } }
+    @media (min-width: 900px) {
+      .Portfolio__container {
+        max-width: 62%;
+        padding: 82px 0px 0px 0px; } }
+    @media (min-width: 1100px) {
+      .Portfolio__container {
+        max-width: 940px;
+        padding: 82px 0px 0px 0px; } }
+    @media (min-width: 1920px) {
+      .Portfolio__container {
+        max-width: 62%;
+        padding: 82px 0px 0px 0px; } }
+  .Portfolio__title {
+    font-size: 34px;
+    line-height: 42px;
+    font-family: "Gilroy-ExtraBold";
+    font-weight: 900;
+    padding: 0px 0px 50px 0px; }
+    @media (min-width: 1700px) {
+      .Portfolio__title {
+        font-size: 46px;
+        line-height: 54px; } }
+    @media (min-width: 1700px) {
+      .Portfolio__title {
+        font-size: 56px;
+        line-height: 64px; } }
+    @media (min-width: 2000px) {
+      .Portfolio__title {
+        font-size: 70px;
+        line-height: 78px; } }
+  .Portfolio__img2 {
+    background-image: url("../../image/portfolio_img/Traffic_Terminal_Task.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 200px; }
+    @media (min-width: 630px) {
+      .Portfolio__img2 {
+        background-size: cover;
+        min-height: 265px; } }
+    @media (min-width: 730px) {
+      .Portfolio__img2 {
+        min-height: 320px; } }
+    @media (min-width: 1100px) {
+      .Portfolio__img2 {
+        min-height: 465px; } }
+    @media (min-width: 1920px) {
+      .Portfolio__img2 {
+        min-height: 600px; } }
+    @media (min-width: 2100px) {
+      .Portfolio__img2 {
+        min-height: 660px; } }
+    @media (min-width: 2300px) {
+      .Portfolio__img2 {
+        min-height: 770px; } }
+  .Portfolio__title__item {
+    padding: 81px 0px 64px 0px;
+    text-decoration-line: underline;
+    font-family: "Gilroy-ExtraBold";
+    font-weight: 900; }
+    @media (min-width: 1920px) {
+      .Portfolio__title__item {
+        font-size: 28px;
+        line-height: 32px; } }
