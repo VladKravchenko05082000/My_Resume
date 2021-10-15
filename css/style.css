@@ -622,15 +622,35 @@ body.lock {
       .Portfolio__title {
         font-size: 70px;
         line-height: 78px; } }
+  .Portfolio__img {
+    background-image: url("../image/portfolio_img/Finance.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px; }
+    @media (min-width: 480px) {
+      .Portfolio__img {
+        min-height: 300px; } }
+    @media (min-width: 730px) {
+      .Portfolio__img {
+        min-height: 350px; } }
+    @media (min-width: 1100px) {
+      .Portfolio__img {
+        min-height: 500px; } }
+    @media (min-width: 1920px) {
+      .Portfolio__img {
+        min-height: 700px; } }
+    @media (min-width: 2300px) {
+      .Portfolio__img {
+        min-height: 850px; } }
   .Portfolio__img2 {
     background-image: url("../image/portfolio_img/Traffic_Terminal_Task.png");
     background-position: 0 0;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     min-height: 200px; }
     @media (min-width: 630px) {
       .Portfolio__img2 {
-        background-size: cover;
         min-height: 265px; } }
     @media (min-width: 730px) {
       .Portfolio__img2 {

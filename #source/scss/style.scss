@@ -608,23 +608,39 @@ body.lock{
       }
    }
 
-   &__items {
-   }
-
-   &__item {
+   &__img{
+      background-image: url('../image/portfolio_img/Finance.png');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size:cover;
+      min-height: 200px; 
+      @media (min-width:480px) {
+         min-height: 300px;
+      }
+      @media (min-width:730px)  {
+         min-height: 350px;
+      }
+      @media (min-width:1100px)  {
+         min-height: 500px;
+      }
+      @media (min-width:1920px)  {
+         min-height: 700px;
+      }
+      @media (min-width:2300px)  {
+         min-height: 850px;
+      }
    }
 
    &__img2 {
-      background-image: url('/../image/portfolio_img/Traffic_Terminal_Task.png');
+      background-image: url('../image/portfolio_img/Traffic_Terminal_Task.png');
       background-position: 0 0;
       background-repeat: no-repeat;
-      background-size:contain;
+      background-size:cover;
       min-height: 200px; 
       @media (min-width:480px) {
          
       }
       @media (min-width:630px) {
-         background-size:cover;
          min-height: 265px;
       }
       @media (min-width:730px)  {
